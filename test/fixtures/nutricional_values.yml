@@ -1,0 +1,45 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  protein: 1.5
+  total_carbohydrate: 1.5
+  lipids: 1.5
+  dietary_fiber: 1.5
+  energy_kcal: 1.5
+  vitamin_a: 1.5
+  vitamin_c: 1.5
+  thiamine: 1.5
+  niacin: 1.5
+  vitamin_b6: 1.5
+  phosphorus: 1.5
+  iron: 1.5
+  sodium: 1.5
+  potassium: 1.5
+  calcium: 1.5
+  magnesium: 1.5
+  manganese: 1.5
+  copper: 1.5
+  zinc: 1.5
+  food: one
+
+two:
+  protein: 1.5
+  total_carbohydrate: 1.5
+  lipids: 1.5
+  dietary_fiber: 1.5
+  energy_kcal: 1.5
+  vitamin_a: 1.5
+  vitamin_c: 1.5
+  thiamine: 1.5
+  niacin: 1.5
+  vitamin_b6: 1.5
+  phosphorus: 1.5
+  iron: 1.5
+  sodium: 1.5
+  potassium: 1.5
+  calcium: 1.5
+  magnesium: 1.5
+  manganese: 1.5
+  copper: 1.5
+  zinc: 1.5
+  food: two
