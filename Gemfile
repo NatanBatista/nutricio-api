@@ -44,3 +44,5 @@ gem "pg", "~> 1.5"
 
 
 gem "devise_token_auth", "~> 1.2"
+
+gem "kaminari", "~> 1.2"
