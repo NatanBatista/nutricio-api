@@ -2,8 +2,15 @@ class FoodsController < ApplicationController
   before_action :set_food, only: [:show, :update, :destroy]
 
   def index
-    @foods = Food.all
-    render json: @foods, include: :nutricional_value
+    @foods = Food.page(params[:page]).per(10)
+    render json: {
+      foods: @foods.as_json(include: :nutricional_value),
+      meta: {
+        current_page: @foods.current_page,
+        total_pages: @foods.total_pages,
+        total_count: @foods.total_count
+      }
+    }
   end
 
   def show
