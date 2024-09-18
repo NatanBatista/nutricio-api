@@ -1,4 +1,5 @@
 class FoodsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_food, only: [:show, :update, :destroy]
 
   def index
@@ -39,6 +40,16 @@ class FoodsController < ApplicationController
     head :no_content
   end
 
+  def bulk_destroy
+    ids = params[:ids]
+    if ids.present?
+      Food.where(id: ids).destroy_all
+      head :no_content
+    else
+      render json: { errors: 'No IDs provided' }, status: :unprocessable_entity
+    end
+  end
+  
   private
 
   def set_food
