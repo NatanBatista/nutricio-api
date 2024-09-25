@@ -3,10 +3,10 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
   encoding: unicode
-  username: dev
-  password: dev
-  host: localhost
-  port: 5432
+  username: <%= Rails.application.credentials.dig(:db, :username) %>
+  password: <%= Rails.application.credentials.dig(:db, :password) %>
+  host: <%= Rails.application.credentials.dig(:db, :host) %>
+  port: <%= Rails.application.credentials.dig(:db, :port) %>
 
 development:
   <<: *default
